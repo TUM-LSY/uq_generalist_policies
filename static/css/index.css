@@ -809,3 +809,27 @@ a:focus {
   opacity: 0;
 }
 @keyframes fiper-spin{ to { transform: rotate(360deg); } }
+
+/* Results tables: keep cells on one line; on desktop, wide tables may extend beyond the
+   four-fifths text column to the full container width (narrower screens scroll horizontally). */
+.results-table th, .results-table td {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.results-table.is-compact th, .results-table.is-compact td {
+  font-size: 0.9rem;
+  padding: 0.3em 0.45em;
+}
+@media (min-width: 1024px) {
+  .table-container.is-wide {
+    width: 125%;
+    max-width: none;
+    margin-left: -12.5%;
+  }
+}
+/* .hero sections are flex columns: without this, their container grows to the unwrapped tables'
+   width on phones instead of letting .table-container scroll. */
+.hero > .container {
+  width: 100%;
+  min-width: 0;
+}

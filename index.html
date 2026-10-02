@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Primary Meta Tags -->
-  <meta name="title" content="Uncertainty Quantification for Flow-Based Vision-Language-Action Models - Römer, Ralf; Seeliger, Maximilian; Liu, Saida; Sturgis, Ben; Bagatella, Marco; Marta, Daniel; Krause, Andreas; Schoellig, Angela P.">
-  <meta name="description" content="We quantify epistemic uncertainty in flow-based vision-language-action models via velocity-field disagreement (VFD), enabling failure detection and sample-efficient active fine-tuning.">
-  <meta name="keywords" content="robotics, vision-language-action models, VLA, flow matching, uncertainty quantification, epistemic uncertainty, active learning, failure detection, LIBERO">
+  <meta name="title" content="Uncertainty Quantification for Flow-Based Generalist Robot Policies - Römer, Ralf; Seeliger, Maximilian; Liu, Saida; Sturgis, Ben; Bagatella, Marco; Marta, Daniel; Krause, Andreas; Schoellig, Angela P.">
+  <meta name="description" content="We quantify epistemic uncertainty in flow-based generalist robot policies (VLAs and world-action models) via velocity-field disagreement (VFD), enabling runtime failure detection and sample-efficient active fine-tuning.">
+  <meta name="keywords" content="robotics, generalist robot policies, vision-language-action models, VLA, world-action models, flow matching, uncertainty quantification, epistemic uncertainty, active learning, active fine-tuning, failure detection, runtime monitoring, LIBERO">
   <meta name="author" content="Römer, Ralf; Seeliger, Maximilian; Liu, Saida; Sturgis, Ben; Bagatella, Marco; Marta, Daniel; Krause, Andreas; Schoellig, Angela P.">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
@@ -15,9 +15,9 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Learning Systems and Robotics (LSY) Lab, TUM">
-  <meta property="og:title" content="Uncertainty Quantification for Flow-Based Vision-Language-Action Models">
-  <meta property="og:description" content="We quantify epistemic uncertainty in flow-based vision-language-action models via velocity-field disagreement (VFD), enabling failure detection and sample-efficient active fine-tuning.">
-  <meta property="og:url" content="https://tum-lsy.github.io/uq_vla/">
+  <meta property="og:title" content="Uncertainty Quantification for Flow-Based Generalist Robot Policies">
+  <meta property="og:description" content="We quantify epistemic uncertainty in flow-based generalist robot policies (VLAs and world-action models) via velocity-field disagreement (VFD), enabling runtime failure detection and sample-efficient active fine-tuning.">
+  <meta property="og:url" content="https://tum-lsy.github.io/uq_vfd/">
   <meta property="article:author" content="Römer, Ralf; Seeliger, Maximilian; Liu, Saida; Sturgis, Ben; Bagatella, Marco; Marta, Daniel; Krause, Andreas; Schoellig, Angela P.">
   <meta property="article:section" content="Research">
   <meta property="article:tag" content="robotics">
@@ -27,7 +27,7 @@
   <meta property="article:tag" content="active learning">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="Uncertainty Quantification for Flow-Based Vision-Language-Action Models">
+  <meta name="citation_title" content="Uncertainty Quantification for Flow-Based Generalist Robot Policies">
   <meta name="citation_author" content="Römer, Ralf">
   <meta name="citation_author" content="Seeliger, Maximilian">
   <meta name="citation_author" content="Liu, Saida">
@@ -37,7 +37,7 @@
   <meta name="citation_author" content="Krause, Andreas">
   <meta name="citation_author" content="Schoellig, Angela P.">
   <meta name="citation_publication_date" content="2026">
-  <meta name="citation_pdf_url" content="https://tum-lsy.github.io/uq_vla/static/uq_vla_paper.pdf">
+  <meta name="citation_pdf_url" content="https://tum-lsy.github.io/uq_vfd/static/uq_vfd_paper.pdf">
 
   <!-- Additional SEO -->
   <meta name="theme-color" content="#3070B3">
@@ -51,7 +51,7 @@
   <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
-  <title>Uncertainty Quantification for Flow-Based Vision-Language-Action Models</title>
+  <title>Uncertainty Quantification for Flow-Based Generalist Robot Policies</title>
 
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -89,20 +89,20 @@
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "Uncertainty Quantification for Flow-Based Vision-Language-Action Models",
-    "description": "We derive an efficient method for quantifying epistemic uncertainty in flow-matching VLAs via velocity-field disagreement (VFD), and use it for failure detection and sample-efficient active fine-tuning.",
+    "headline": "Uncertainty Quantification for Flow-Based Generalist Robot Policies",
+    "description": "We derive an efficient method for quantifying epistemic uncertainty in flow-based generalist robot policies via velocity-field disagreement (VFD), and use it for failure detection and sample-efficient active fine-tuning.",
     "author": [
       { "@type": "Person", "name": "Ralf Römer", "affiliation": { "@type": "Organization", "name": "Technical University of Munich" } },
       { "@type": "Person", "name": "Maximilian Seeliger", "affiliation": { "@type": "Organization", "name": "ETH Zurich" } },
       { "@type": "Person", "name": "Saida Liu", "affiliation": { "@type": "Organization", "name": "Technical University of Munich" } },
       { "@type": "Person", "name": "Ben Sturgis", "affiliation": { "@type": "Organization", "name": "Technical University of Munich" } },
-      { "@type": "Person", "name": "Marco Bagatella", "affiliation": { "@type": "Organization", "name": "ETH Zurich" } },
+      { "@type": "Person", "name": "Marco Bagatella", "affiliation": [{ "@type": "Organization", "name": "ETH Zurich" }, { "@type": "Organization", "name": "MPI for Intelligent Systems" }] },
       { "@type": "Person", "name": "Daniel Marta", "affiliation": { "@type": "Organization", "name": "ETH Zurich" } },
       { "@type": "Person", "name": "Andreas Krause", "affiliation": { "@type": "Organization", "name": "ETH Zurich" } },
-      { "@type": "Person", "name": "Angela P. Schoellig", "affiliation": { "@type": "Organization", "name": "Technical University of Munich" } }
+      { "@type": "Person", "name": "Angela P. Schoellig", "affiliation": [{ "@type": "Organization", "name": "Technical University of Munich" }, { "@type": "Organization", "name": "Robotics Institute Germany" }] }
     ],
     "datePublished": "2026",
-    "url": "https://tum-lsy.github.io/uq_vla/",
+    "url": "https://tum-lsy.github.io/uq_vfd/",
     "keywords": ["robotics", "vision-language-action models", "flow matching", "uncertainty quantification", "epistemic uncertainty", "active learning", "failure detection"],
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/"
@@ -122,7 +122,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Uncertainty Quantification for Flow-Based Vision-Language-Action Models</h1>
+            <h1 class="title is-1 publication-title">Uncertainty Quantification for Flow-Based Generalist Robot Policies</h1>
 
             <div class="is-flex is-justify-content-center is-align-items-center" style="margin-bottom: 1em;">
               <span class="is-size-4 has-text-weight-bold" style="vertical-align:middle; color:#3070B3;">2026</span>
@@ -144,16 +144,17 @@
               <span class="author-block">
                 <a href="https://las.inf.ethz.ch/krausea" target="_blank">Andreas Krause</a><sup>2</sup>,</span>
               <span class="author-block">
-                <a href="https://www.dynsyslab.org/prof-angela-schoellig/" target="_blank">Angela P. Schoellig</a><sup>1</sup></span>
+                <a href="https://www.dynsyslab.org/prof-angela-schoellig/" target="_blank">Angela P. Schoellig</a><sup>1,4</sup></span>
             </div>
 
             <div class="is-size-5 publication-authors">
               <span class="author-block"><sup>1</sup> Technical University of Munich&nbsp;&nbsp;</span>
               <span class="author-block"><sup>2</sup> ETH Zurich&nbsp;&nbsp;</span>
-              <span class="author-block"><sup>3</sup> MPI for Intelligent Systems</span>
+              <span class="author-block"><sup>3</sup> MPI for Intelligent Systems, Tübingen&nbsp;&nbsp;</span>
+              <span class="author-block"><sup>4</sup> Robotics Institute Germany</span>
             </div>
 
-            <div class="is-flex is-justify-content-center is-align-items-center" style="gap: 1.2em; margin: 1.2em 0;">
+            <div class="is-flex is-justify-content-center is-align-items-center" style="gap: 1.2em; margin: 1.2em 0; flex-wrap: wrap;">
               <img src="static/images/Logo_of_the_Technical_University_of_Munich.svg" alt="TUM" style="height:2em;">
               <img src="static/images/eth_logo.png" alt="ETH Zurich" style="height:2em;">
               <img src="static/images/mpi_logo.webp" alt="MPI for Intelligent Systems" style="height:2.4em;">
@@ -198,21 +199,25 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            <strong>Vision-language-action models (VLAs)</strong> combine vision-language backbones with expressive generative action heads
-            trained via <strong>flow matching</strong> on large-scale robotic datasets. Despite their strong empirical performance in robotic
-            manipulation, VLAs lack mechanisms to quantify <strong>confidence</strong> in their predictions and to detect when their actions may
-            be <strong>unreliable</strong>. This presents a critical limitation for real-world deployment in non-stationary environments, where
-            models inevitably encounter scenarios outside their pretraining distribution and may fail without warning.
-            To address this, we derive an efficient method for quantifying <strong>epistemic uncertainty</strong> in flow-matching models by
-            leveraging <strong>velocity-field disagreement (VFD)</strong> across a small ensemble. We successfully use this
-            uncertainty estimate for <strong>failure detection</strong> during deployment and <strong>active fine-tuning</strong>
-            of flow-based VLAs. To this end, we propose <strong>SAVE</strong>, a framework for uncertainty-guided active
-            multitask fine-tuning that reduces the number of costly expert demonstrations required to adapt VLAs to new tasks.
-            Through extensive experiments on the LIBERO benchmark, we demonstrate that VFD yields better-calibrated uncertainty
-            estimates predictive of downstream performance, that VFD achieves strong performance in detecting failures, and that
-            uncertainty-guided data acquisition with SAVE requires at least <strong>22% fewer samples</strong> than baselines.
-            In summary, our work shows that quantifying epistemic uncertainty in flow-based VLAs improves both failure awareness
-            and adaptation.
+            <strong>Generalist robot policies</strong>, such as vision-language-action models (VLAs) and world-action models
+            (WAMs), combine powerful pretrained backbones with expressive generative action heads trained via
+            <strong>flow matching</strong> on large-scale robotic datasets. Despite their strong empirical performance in robotic
+            manipulation, these policies lack mechanisms to quantify <strong>confidence</strong> in their predictions and to
+            detect when their actions may be <strong>unreliable</strong>. This presents a critical limitation for real-world
+            deployment in non-stationary environments, where models inevitably encounter scenarios outside their pretraining
+            distribution and may fail without warning.
+            To address this, we derive an efficient method to quantify <strong>epistemic uncertainty</strong> in flow-matching
+            models by leveraging <strong>velocity-field disagreement (VFD)</strong> across a small ensemble. We successfully use
+            this uncertainty estimate for <strong>detecting failures</strong> during deployment and <strong>active
+            fine-tuning</strong> of flow-based generalist policies. For the latter, we propose <strong>SAVE</strong>, a simple yet
+            effective method for uncertainty-guided active multitask fine-tuning that reduces the number of costly expert
+            demonstrations required to adapt generalist policies to new tasks.
+            We conduct experiments in simulation and the real world, across VLAs and a WAM. VFD yields better-calibrated
+            uncertainty estimates predictive of downstream performance and detects failures with <strong>8&nbsp;pp higher
+            overall accuracy</strong> than existing methods. Across three real-world tasks, SAVE improves final average success
+            from <strong>39% to 47%</strong> with a fixed demonstration budget.
+            Our results show that measuring epistemic uncertainty with VFD enhances both failure awareness and adaptation of
+            generalist robot policies.
           </p>
         </div>
       </div>
@@ -225,16 +230,16 @@
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
-      <div class="column is-four-fifths has-text-centered">
+      <div class="column has-text-centered">
         <h2 class="title is-3">Overview</h2>
-        <img src="static/images/overview.png" alt="Method overview" style="width:100%; height:auto; display:block; margin-bottom:1em;">
+        <img src="static/images/overview.png" alt="Method overview: VFD, active multitask fine-tuning with SAVE, and runtime failure detection" style="width:100%; height:auto; display:block; margin-bottom:1em;">
         <div class="content has-text-justified">
           <span class="is-size-6">
-            <strong>Figure 1.</strong> <strong>Top:</strong> VFD quantifies epistemic uncertainty by measuring scaled
-            differences between ensembled velocity fields. <strong>Bottom:</strong> SAVE prioritizes tasks by their mean VFD
-            uncertainty and, for the most uncertain initial observations within each sampled task, requests an expert
-            demonstration. The models are then fine-tuned using new and replay data, yielding data-efficient multitask
-            adaptation.
+            <strong>Figure 1.</strong> <strong>Top:</strong> We measure epistemic uncertainty in flow-based generalist policies
+            by measuring scaled differences between ensembled velocity fields. <strong>Bottom:</strong> VFD enhances the
+            adaptability and reliability of generalist policies in multiple ways. <em>Left:</em> We propose SAVE, an active
+            fine-tuning method that allocates expert demonstration budget to tasks and initial states with the highest
+            uncertainty. <em>Right:</em> VFD is an effective runtime monitor for detecting failures during deployment.
           </span>
         </div>
       </div>
@@ -250,17 +255,17 @@
         <h2 class="title is-3">Motivation</h2>
         <div class="content has-text-justified">
           <p>
-            Modern VLAs pair a pre-trained vision-language backbone with an action expert trained via flow matching, achieving
-            impressive multitask performance. Yet deploying them in the real world exposes them to non-stationarity: users
-            repurpose robots for novel tasks, object appearances change, and environments evolve.
+            Modern generalist robot policies pair a pretrained vision-language or video backbone with an action generation via
+            flow matching. Yet deploying them in the real world exposes them to non-stationarity: users repurpose robots for novel 
+            tasks, object appearances change, and environments evolve.
           </p>
           <ul>
-            <li>VLAs <strong>confidently execute erratic actions</strong> in out-of-distribution scenarios rather than abstaining or asking for help.</li>
+            <li>Generalist policies <strong>confidently execute erratic actions</strong> in out-of-distribution scenarios rather than abstaining or asking for help.</li>
             <li>They cannot communicate <strong>what they do not know</strong>, preventing timely failure detection and robust self-improvement.</li>
-            <li>Robustly adapting VLAs to new domains currently requires collecting <strong>large numbers of costly expert demonstrations</strong>.</li>
+            <li>Robustly adapting them to new domains currently requires collecting <strong>large numbers of costly expert demonstrations</strong>.</li>
           </ul>
           <p>
-            We address these challenges by quantifying epistemic uncertainty in flow-based VLAs through <strong>velocity-field
+            We address these challenges by quantifying epistemic uncertainty in flow-based policies through <strong>velocity-field
             disagreement (VFD)</strong>, and use it both to detect failures at deployment and to guide data-efficient adaptation
             with <strong>SAVE</strong> (<u>s</u>ample-efficient <u>a</u>ctive fine-tuning via <u>v</u>elocity-field <u>e</u>pistemic
             uncertainty).
@@ -271,28 +276,28 @@
   </div>
 </section>
 
-<!-- Method / Toy example Figure 2 -->
+<!-- Method / Toy example -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths has-text-centered">
         <h2 class="title is-3">Velocity-Field Disagreement</h2>
-        <img src="static/images/UQ_VLA1.png" alt="2D toy example of VFD uncertainty" style="width:100%; height:auto; display:block; margin-bottom:1em;">
+        <img src="static/images/UQ_VLA1.png" alt="Illustration of VFD for low- and high-uncertainty observations" style="width:100%; height:auto; display:block; margin-bottom:1em;">
         <div class="content has-text-justified">
           <p>
             VFD measures the disagreement between the velocity fields of a small ensemble of flow-matching models along their
             generative ODE trajectories. The estimator is mathematically grounded, computationally tractable, and naturally
-            handles the high-dimensional, multimodal action distributions of VLAs. On a 2D toy problem, VFD is high precisely
-            where inputs lie far outside the training distribution, closely matching the KL divergence between the learned and ground-truth
-            conditional distributions.
+            handles the high-dimensional, multimodal action distributions of generalist policies. On a 2D toy problem, VFD is
+            high precisely where inputs lie far outside the training distribution, closely matching the KL divergence between
+            the learned and ground-truth conditional distributions.
           </p>
         </div>
         <img src="static/images/toy_example.png" alt="2D toy example of VFD uncertainty" style="width:100%; height:auto; display:block; margin-bottom:1em;">
         <div class="content has-text-justified">
           <span class="is-size-6">
-            Epistemic uncertainty estimation for a 2D generative modeling problem. Our velocity-field
-            disagreement (VFD) uncertainty score is high for inputs far from the training distribution, similar to the KL
-            divergence between the learned models' conditional distributions and the ground truth.
+            <strong>Figure 2. VFD for a 2D toy example.</strong> Our VFD uncertainty score is high for inputs far from the
+            training distribution, similar to the KL divergence between the learned models' conditional distributions and the
+            ground truth.
           </span>
         </div>
       </div>
@@ -300,165 +305,266 @@
   </div>
 </section>
 
-<!-- Calibration: Table 1 + Figures 3 & 4 -->
+<!-- Experimental setup -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
-      <div class="column is-four-fifths has-text-centered">
-        <h2 class="title is-3">Calibration</h2>
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Experimental Setup</h2>
         <div class="content has-text-justified">
           <p>
-            On the LIBERO benchmark, VFD is more strongly correlated with per-task success rates than a wide range of
-            uncertainty baselines, making it a reliable predictor of downstream performance. A lightweight two-member ensemble
-            is sufficient, and VFD remains well-calibrated even when only the language prompt is varied.
+            We evaluate VFD in simulation and the real world. In simulation, we use <strong>Push-T</strong>, the long-horizon
+            <strong>LIBERO-Long</strong> suite, and <strong>LIBERO-Plus</strong>, whose perturbations of object layouts, camera
+            viewpoints and more yield a wide range of failure modes. In the real world, an FR3 robot learns three new tasks:
+            placing a bowl on a plate (<code>Place</code>), stacking a bowl on top of three other bowls (<code>Stack</code>),
+            and placing a Lego brick into a drawer and closing it (<code>Drawer</code>).
+            We use three generalist policies, the VLAs <strong>SmolVLA</strong> (550M) and <strong>X-VLA</strong> (900M) and the
+            world-action model <strong>FastWAM</strong> (6B), as well as an FM-Policy trained from scratch on Push-T. The main
+            experiments use an ensemble of only <strong>two</strong> members.
           </p>
         </div>
-
-        <div class="table-container" style="margin-bottom: 1.5em;">
-          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" style="background-color: white;">
-            <caption class="is-size-6 has-text-justified" style="caption-side: bottom; padding-top: 0.75em;">
-              <strong>Table 1. Calibration analysis.</strong> Negative Spearman rank (&uarr;) and negative Pearson (&uarr;)
-              correlation between uncertainty estimates and per-task success rates, averaged across iterative fine-tuning rounds.
-            </caption>
-            <thead>
-              <tr>
-                <th>Metric</th>
-                <th>Action-L2</th>
-                <th>ACE</th>
-                <th>DECU</th>
-                <th>GU</th>
-                <th>Entropy</th>
-                <th>Perplexity</th>
-                <th>VFD (ours)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>&minus;Spearman</td>
-                <td>0.50<sup>±0.13</sup></td>
-                <td>0.31<sup>±0.12</sup></td>
-                <td>0.31<sup>±0.13</sup></td>
-                <td>0.62<sup>±0.00</sup></td>
-                <td>0.10<sup>±0.12</sup></td>
-                <td>&minus;0.04<sup>±0.09</sup></td>
-                <td><strong>0.71<sup>±0.03</sup></strong></td>
-              </tr>
-              <tr>
-                <td>&minus;Pearson</td>
-                <td>0.48<sup>±0.09</sup></td>
-                <td>0.36<sup>±0.08</sup></td>
-                <td>0.23<sup>±0.15</sup></td>
-                <td>0.65<sup>±0.02</sup></td>
-                <td>0.23<sup>±0.21</sup></td>
-                <td>0.02<sup>±0.15</sup></td>
-                <td><strong>0.71<sup>±0.02</sup></strong></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="columns is-vcentered" style="margin-top: 1.5em;">
-          <div class="column is-half has-text-centered">
-            <img src="static/images/ensemble_size_ablation.png" alt="Ensemble size ablation" style="max-height:320px; width:auto; display:block; margin:0 auto;">
-            <div class="content has-text-justified" style="margin-top:0.75em;">
-              <span class="is-size-6"><strong>Figure 3.</strong> The VLA ensemble size has little impact on calibration, allowing for a lightweight two-member ensemble.</span>
-            </div>
-          </div>
-          <div class="column is-half has-text-centered">
-            <img src="static/images/language_variation.png" alt="Language variation calibration" style="max-height:320px; width:auto; display:block; margin:0 auto;">
-            <div class="content has-text-justified" style="margin-top:0.75em;">
-              <span class="is-size-6"><strong>Figure 4.</strong> VFD is also well-calibrated when varying only the language prompt.</span>
-            </div>
-          </div>
+        <img src="static/images/real_world_tasks.jpg" alt="The three real-world tasks Place, Stack and Drawer, in nominal (top) and OOD (bottom) settings" style="width:100%; max-width:520px; height:auto; display:block; margin:1.5em auto 0.75em;">
+        <div class="content has-text-justified" style="max-width:520px; margin:0 auto;">
+          <span class="is-size-6">
+            <strong>Figure 3. Real-world tasks.</strong> <em>Top:</em> nominal settings used to collect demonstrations and
+            evaluate active fine-tuning. <em>Bottom:</em> OOD settings with novel distractor objects in our failure detection
+            experiments.
+          </span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Active fine-tuning: Table 2 + Figure 5 -->
-<section class="section">
+<!-- Active fine-tuning: Table 2 + Figures 4 & 5 -->
+<section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths has-text-centered">
         <h2 class="title is-3">Sample-Efficient Active Fine-Tuning</h2>
         <div class="content has-text-justified">
           <p>
-            Using VFD to guide demonstration collection, SAVE reaches target success rates with substantially fewer
-            fine-tuning rounds and attains the highest final success rate among all selection strategies &mdash; reducing the
-            required expert data by at least 22% compared to baselines.
+            SAVE uses VFD to decide which expert demonstrations to collect: it prioritizes tasks by their uncertainty and, within
+            each sampled task, queries demonstrations for the most uncertain initial states. We compare it to random selection,
+            visual diversity (k-center greedy), AMF, and SAVE with GU or Action-L2 in place of VFD.
+            SAVE w/ VFD consistently yields the highest area under the learning curve (AULC) and success rate over the last three
+            rounds (Last-3 SR) across all policies and environments, with a +1.9 to +5.1&nbsp;pp gain in Last-3 SR over the
+            strongest baseline in each setting. The ordering VFD &gt; GU &gt; Action-L2 mirrors the calibration results (below),
+            highlighting the importance of well-calibrated uncertainty for guiding active fine-tuning.
           </p>
         </div>
 
-        <div class="table-container" style="margin-bottom: 1.5em;">
-          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" style="background-color: white;">
+        <div class="table-container is-wide" style="margin-bottom: 1.5em;">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth results-table is-compact" style="background-color: white;">
             <caption class="is-size-6 has-text-justified" style="caption-side: bottom; padding-top: 0.75em;">
-              <strong>Table 2. Sample efficiency.</strong> Number of active fine-tuning rounds (&darr;) to reach certain
-              success rates (SR) and final SR (&uarr;) for different demonstration selection strategies. Thresholds not reached
-              within 15 rounds are marked as "&mdash;".
+              <strong>Table 2. Active fine-tuning in simulation.</strong> Area under the learning curve (AULC, &uarr;) and
+              average success rate across the last three rounds (Last-3 SR, &uarr;) for different data acquisition strategies.
             </caption>
             <thead>
               <tr>
-                <th>SR Threshold</th>
-                <th>Random</th>
-                <th>Diversity</th>
-                <th>SAVE w/ Action-L2</th>
-                <th>SAVE w/ GU</th>
-                <th>SAVE w/ VFD</th>
+                <th>Benchmark</th>
+                <th colspan="2" class="has-text-centered">Push-T</th>
+                <th colspan="6" class="has-text-centered">LIBERO-Long</th>
+              </tr>
+              <tr>
+                <th>Policy</th>
+                <th colspan="2" class="has-text-centered">FM-Policy</th>
+                <th colspan="2" class="has-text-centered">SmolVLA</th>
+                <th colspan="2" class="has-text-centered">X-VLA</th>
+                <th colspan="2" class="has-text-centered">FastWAM</th>
+              </tr>
+              <tr>
+                <th>Method</th>
+                <th>AULC</th><th>Last-3 SR</th>
+                <th>AULC</th><th>Last-3 SR</th>
+                <th>AULC</th><th>Last-3 SR</th>
+                <th>AULC</th><th>Last-3 SR</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>&ge; 40%</td><td>5.7<sup>±1.2</sup></td><td><strong>4.7<sup>±0.5</sup></strong></td><td>5.0<sup>±0.8</sup></td><td>5.0<sup>±1.4</sup></td><td>5.0<sup>±0.8</sup></td></tr>
-              <tr><td>&ge; 45%</td><td>6.7<sup>±1.2</sup></td><td>7.3<sup>±0.9</sup></td><td>6.0<sup>±1.4</sup></td><td>5.7<sup>±2.4</sup></td><td><strong>5.3<sup>±0.9</sup></strong></td></tr>
-              <tr><td>&ge; 50%</td><td>8.7<sup>±2.1</sup></td><td>9.7<sup>±1.7</sup></td><td>9.0<sup>±2.4</sup></td><td>7.3<sup>±1.9</sup></td><td><strong>6.0<sup>±0.8</sup></strong></td></tr>
-              <tr><td>&ge; 55%</td><td>&mdash;</td><td>&mdash;</td><td>9.0<sup>±1.0</sup></td><td>11.0<sup>±1.6</sup></td><td><strong>8.0<sup>±1.6</sup></strong></td></tr>
-              <tr><td>&ge; 60%</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>12.7<sup>±1.7</sup></td><td><strong>10.0<sup>±0.8</sup></strong></td></tr>
-              <tr><td>&ge; 65%</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td><strong>12.5<sup>±0.5</sup></strong></td></tr>
+              <tr><td>Random</td><td>38.0<sup>±3.2</sup></td><td>46.3<sup>±3.1</sup></td><td>44.6<sup>±2.2</sup></td><td>52.6<sup>±3.3</sup></td><td>37.7<sup>±1.2</sup></td><td>45.1<sup>±0.3</sup></td><td>54.2<sup>±2.5</sup></td><td>64.8<sup>±6.6</sup></td></tr>
+              <tr><td>Diversity</td><td>40.5<sup>±1.9</sup></td><td>51.2<sup>±3.2</sup></td><td>45.5<sup>±1.8</sup></td><td>53.1<sup>±2.0</sup></td><td>40.2<sup>±1.9</sup></td><td>49.0<sup>±3.3</sup></td><td>53.9<sup>±0.8</sup></td><td>63.9<sup>±0.3</sup></td></tr>
+              <tr><td>AMF</td><td>N/A</td><td>N/A</td><td>45.6<sup>±3.3</sup></td><td>59.4<sup>±3.3</sup></td><td>39.5<sup>±1.9</sup></td><td>51.0<sup>±1.3</sup></td><td>55.6<sup>±1.4</sup></td><td>69.4<sup>±1.3</sup></td></tr>
+              <tr><td>SAVE w/ GU</td><td>44.7<sup>±2.9</sup></td><td>54.3<sup>±3.3</sup></td><td>48.6<sup>±5.0</sup></td><td>61.0<sup>±2.9</sup></td><td>40.7<sup>±3.5</sup></td><td>49.2<sup>±1.8</sup></td><td>59.0<sup>±4.4</sup></td><td>70.6<sup>±6.1</sup></td></tr>
+              <tr><td>SAVE w/ Action-L2</td><td>39.8<sup>±3.4</sup></td><td>45.0<sup>±2.6</sup></td><td>47.2<sup>±5.1</sup></td><td>55.5<sup>±6.8</sup></td><td>39.2<sup>±0.9</sup></td><td>50.9<sup>±2.2</sup></td><td>57.0<sup>±3.3</sup></td><td>71.6<sup>±5.2</sup></td></tr>
+              <tr><td><strong>SAVE w/ VFD</strong></td><td><strong>46.6<sup>±2.5</sup></strong></td><td><strong>59.3<sup>±3.1</sup></strong></td><td><strong>52.3<sup>±2.2</sup></strong></td><td><strong>66.1<sup>±2.8</sup></strong></td><td><strong>42.5<sup>±1.0</sup></strong></td><td><strong>52.9<sup>±2.9</sup></strong></td><td><strong>61.1<sup>±3.5</sup></strong></td><td><strong>74.8<sup>±3.3</sup></strong></td></tr>
             </tbody>
-            <tfoot>
-              <tr><td>Final SR</td><td>54.6<sup>±0.9</sup></td><td>54.9<sup>±1.3</sup></td><td>56.8<sup>±7.6</sup></td><td>64.0<sup>±2.6</sup></td><td><strong>67.1<sup>±3.2</sup></strong></td></tr>
-            </tfoot>
           </table>
         </div>
 
-        <img src="static/images/success_share_entropy.png" alt="Effect of task-sampling temperature on SAVE" style="width:100%; height:auto; display:block; margin-top:1em;">
-        <div class="content has-text-justified" style="margin-top:0.75em;">
-          <span class="is-size-6">
-            <strong>Figure 5. Effect of the task-sampling temperature &tau; on SAVE.</strong> Larger &tau; biases expert queries
-            toward higher-uncertainty tasks, with uniform sampling for &tau;=0. <strong>Left:</strong> Uncertainty guidance is
-            beneficial both for sampling tasks and initial observations; legend entries containing <em>uniform</em> sample initial
-            observations within a task uniformly instead of uncertainty-guided. <strong>Middle:</strong> Uncertainty-based sampling
-            more rapidly reduces the fraction of uncertainty concentrated in the most uncertain task, indicating better allocation
-            of demonstrations to underperforming tasks. <strong>Right:</strong> SAVE reduces the difference in prior knowledge
-            about tasks; for &tau; &le; 2.5, the temperature controls an exploration&ndash;exploitation trade-off between task
-            coverage and final success rate.
-          </span>
+        <div class="content has-text-justified">
+          <p>
+            In the real world, SAVE w/ VFD consistently achieves success rates that the baselines reach only after at least 30
+            additional demonstrations, if at all. At 150 demonstrations, it yields an average task success of
+            <strong>47%</strong>, between +8 and +25&nbsp;pp higher than the baselines. Uncertainty guidance benefits both task
+            and initial-state selection: SAVE w/ VFD allocates demonstration budget to the tasks that require it most, trading off
+            diversity in selected tasks for faster multitask improvement.
+          </p>
+        </div>
+
+        <div class="columns is-centered is-vcentered" style="margin-top: 1em;">
+          <div class="column is-half has-text-centered">
+            <img src="static/images/real_world_success_rates.png" alt="Real-world success rates over demonstrations" style="width:100%; max-width:380px; height:auto; display:block; margin:0 auto;">
+            <div class="content has-text-justified" style="margin-top:0.75em;">
+              <span class="is-size-6"><strong>Figure 4. Active fine-tuning in the real world.</strong> For fixed demonstration budgets, SAVE w/ VFD improves multitask performance the most.</span>
+            </div>
+          </div>
+          <div class="column is-half has-text-centered">
+            <img src="static/images/exploration_vs_success.png" alt="Exploration versus exploitation in SAVE" style="width:100%; max-width:420px; height:auto; display:block; margin:0 auto;">
+            <div class="content has-text-justified" style="margin-top:0.75em;">
+              <span class="is-size-6"><strong>Figure 5. Exploration vs. exploitation.</strong> SAVE w/ VFD prioritizes tasks with higher uncertainty, trading off diversity for multitask improvement.</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Failure Detection -->
-<section class="section hero is-light">
+<!-- Failure Detection: Table 3 -->
+<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths has-text-centered">
         <h2 class="title is-3">Failure Detection</h2>
         <div class="content has-text-justified">
           <p>
-            Beyond guiding data collection, VFD also signals when a deployed policy is about to fail. We roll out the
-            fine-tuned VLA, compute VFD scores from the two-member ensemble at each action-generation timestep, and calibrate
-            task-specific thresholds from only 10 successful rollouts using conformal prediction. Compared to recent
-            failure-detection baselines (ACE, STAC, RND-OE), high VFD is a strong signal for imminent failure &mdash; reaching
-            <strong>67% accuracy</strong> and correctly predicting <strong>79% of all failures</strong> (TPR).
+            Beyond guiding data collection, VFD also signals when a deployed policy is about to fail. We roll out the policy,
+            compute VFD at each action-generation timestep, and calibrate thresholds from only 20 (real world: 10) successful
+            rollouts per task using conformal prediction, i.e., without any failure data. In the real world, we create
+            out-of-distribution scenarios by adding novel background objects, such as pieces of fruit or a pan.
+            We compare against OOD detectors trained on the policies' training data (RND-OE, logpZO), temporal consistency of
+            the action distributions (STAC), and action-chunk entropy (ACE).
+          </p>
+          <p>
+            VFD achieves a balanced accuracy of <strong>72%</strong> across all environments, <strong>8&nbsp;pp</strong> higher
+            than the strongest baseline, logpZO. Unlike observation-based OOD detectors, VFD reliably distinguishes benign OOD
+            situations in which the policy still succeeds from actual failures, achieving a true negative rate of 81% compared to
+            58% (logpZO) and 54% (RND-OE). This makes VFD well suited for runtime monitoring of capable generalist policies that
+            can handle some, but not all, novel scenarios.
           </p>
         </div>
-        <img src="static/images/failure_detection.png" alt="Failure detection with VFD" style="max-height:288px; width:auto; display:block; margin:0 auto 1em;">
+
+        <div class="table-container is-wide" style="margin-bottom: 1.5em;">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth results-table is-compact" style="background-color: white;">
+            <caption class="is-size-6 has-text-justified" style="caption-side: bottom; padding-top: 0.75em;">
+              <strong>Table 3. Failure detection.</strong> VFD achieves the highest balanced accuracy (Acc.) and the best overall
+              trade-off between accuracy and early detection, as measured by timestep-wise accuracy (TWA).
+            </caption>
+            <thead>
+              <tr>
+                <th></th>
+                <th colspan="2" class="has-text-centered">Push-T</th>
+                <th colspan="2" class="has-text-centered">LIBERO-Plus</th>
+                <th colspan="2" class="has-text-centered">Real World</th>
+                <th colspan="2" class="has-text-centered">Average</th>
+              </tr>
+              <tr>
+                <th>Method</th>
+                <th>Acc. &uarr;</th><th>TWA &uarr;</th>
+                <th>Acc. &uarr;</th><th>TWA &uarr;</th>
+                <th>Acc. &uarr;</th><th>TWA &uarr;</th>
+                <th>Acc. &uarr;</th><th>TWA &uarr;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>STAC</td><td>0.55<sup>±0.00</sup></td><td>0.51<sup>±0.00</sup></td><td>0.70<sup>±0.03</sup></td><td>0.59<sup>±0.02</sup></td><td>0.43<sup>±0.02</sup></td><td>0.42<sup>±0.02</sup></td><td>0.56<sup>±0.02</sup></td><td>0.51<sup>±0.01</sup></td></tr>
+              <tr><td>logpZO</td><td>0.53<sup>±0.01</sup></td><td>0.51<sup>±0.02</sup></td><td>0.68<sup>±0.02</sup></td><td>0.62<sup>±0.01</sup></td><td>0.70<sup>±0.03</sup></td><td><strong>0.64<sup>±0.03</sup></strong></td><td>0.64<sup>±0.02</sup></td><td>0.59<sup>±0.02</sup></td></tr>
+              <tr><td>RND-OE</td><td>0.50<sup>±0.02</sup></td><td>0.50<sup>±0.02</sup></td><td>0.67<sup>±0.01</sup></td><td>0.62<sup>±0.01</sup></td><td>0.69<sup>±0.04</sup></td><td>0.61<sup>±0.02</sup></td><td>0.62<sup>±0.00</sup></td><td>0.58<sup>±0.00</sup></td></tr>
+              <tr><td>ACE</td><td>0.55<sup>±0.06</sup></td><td>0.51<sup>±0.03</sup></td><td>0.75<sup>±0.02</sup></td><td>0.59<sup>±0.02</sup></td><td>0.54<sup>±0.01</sup></td><td>0.50<sup>±0.00</sup></td><td>0.61<sup>±0.02</sup></td><td>0.54<sup>±0.02</sup></td></tr>
+              <tr><td><strong>VFD (ours)</strong></td><td><strong>0.64<sup>±0.05</sup></strong></td><td><strong>0.56<sup>±0.05</sup></strong></td><td><strong>0.79<sup>±0.00</sup></strong></td><td><strong>0.65<sup>±0.00</sup></strong></td><td><strong>0.73<sup>±0.01</sup></strong></td><td>0.58<sup>±0.00</sup></td><td><strong>0.72<sup>±0.02</sup></strong></td><td><strong>0.60<sup>±0.02</sup></strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Calibration: Table 1 -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
+        <h2 class="title is-3">Calibration</h2>
         <div class="content has-text-justified">
-          <span class="is-size-6">
-            <strong>Figure 6.</strong> VFD epistemic uncertainty can detect failures during deployment.
-          </span>
+          <p>
+            We measure how well uncertainty estimates reflect a policy's task-completion capabilities by the Spearman rank
+            correlation between per-task uncertainty and success rate over iterative fine-tuning rounds on LIBERO-Long. Across
+            all three generalist policies, VFD is more strongly correlated with task success than all baselines, with negative
+            Spearman correlations between 0.05 and 0.17 higher than the best-performing baseline, GU. The VFD uncertainty of a
+            policy on the initial frames is thus a strong indicator of how difficult the respective task is for that policy.
+          </p>
+        </div>
+
+        <div class="table-container" style="margin-bottom: 1.5em;">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth results-table" style="background-color: white;">
+            <caption class="is-size-6 has-text-justified" style="caption-side: bottom; padding-top: 0.75em;">
+              <strong>Table 1. Calibration analysis.</strong> Negative Spearman's rank correlation (&uarr;) between uncertainty
+              estimates and per-task success rates in LIBERO-Long, averaged across iterative fine-tuning rounds.
+            </caption>
+            <thead>
+              <tr>
+                <th>Policy</th>
+                <th>Action-L2</th>
+                <th>ACE</th>
+                <th>DECU</th>
+                <th>GU</th>
+                <th>VFD (ours)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>SmolVLA</td><td>0.50<sup>±0.13</sup></td><td>0.31<sup>±0.12</sup></td><td>0.31<sup>±0.13</sup></td><td>0.62<sup>±0.00</sup></td><td><strong>0.71<sup>±0.03</sup></strong></td></tr>
+              <tr><td>X-VLA</td><td>0.33<sup>±0.24</sup></td><td>0.14<sup>±0.05</sup></td><td>0.06<sup>±0.04</sup></td><td>0.48<sup>±0.06</sup></td><td><strong>0.53<sup>±0.02</sup></strong></td></tr>
+              <tr><td>FastWAM</td><td>&minus;0.12<sup>±0.06</sup></td><td>&minus;0.29<sup>±0.07</sup></td><td>0.03<sup>±0.07</sup></td><td>0.27<sup>±0.04</sup></td><td><strong>0.44<sup>±0.17</sup></strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Computational cost: Table 4 -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
+        <h2 class="title is-3">Computational Cost</h2>
+        <div class="content has-text-justified">
+          <p>
+            Computing VFD requires a second policy and evaluating both velocity fields for a batch of action chunks at several
+            flow times. With the default two-member ensemble, this adds 89&nbsp;ms per action generation in our real-world
+            rollouts. Evaluating a single flow time and a single action chunk reduces the overhead to 32&nbsp;ms (1.19&times;
+            the base policy), while balanced accuracy only drops from 0.73 to 0.70. Perturbing the policy's weights with layer-normalized Gaussian noise
+            instead of training a second model still reaches a balanced accuracy of 68%, which is 14 to 25&nbsp;pp above the two
+            training-free baselines, STAC and ACE.
+          </p>
+        </div>
+
+        <div class="table-container" style="margin-bottom: 1.5em;">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth results-table" style="background-color: white;">
+            <caption class="is-size-6 has-text-justified" style="caption-side: bottom; padding-top: 0.75em;">
+              <strong>Table 4. Computational cost.</strong> Speeding up the computation of VFD only slightly reduces failure
+              detection accuracy in the real world.
+            </caption>
+            <thead>
+              <tr>
+                <th>Posterior<br>approximation</th>
+                <th># Flow times,<br>batch size</th>
+                <th>Balanced<br>accuracy</th>
+                <th>Inference<br>time</th>
+                <th>vs. base<br>policy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Ensemble (4)</td><td>4, 8</td><td>0.78<sup>±0.00</sup></td><td>+251 ms</td><td>2.48&times;</td></tr>
+              <tr><td>Ensemble (2)</td><td>4, 8</td><td>0.73<sup>±0.01</sup></td><td>+89 ms</td><td>1.53&times;</td></tr>
+              <tr><td>Ensemble (2)</td><td>1, 8</td><td>0.72<sup>±0.01</sup></td><td>+49 ms</td><td>1.29&times;</td></tr>
+              <tr><td>Ensemble (2)</td><td>1, 1</td><td>0.70<sup>±0.02</sup></td><td>+32 ms</td><td>1.19&times;</td></tr>
+              <tr><td>Weight perturbation</td><td>1, 1</td><td>0.68<sup>±0.01</sup></td><td>+29 ms</td><td>1.17&times;</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -466,18 +572,18 @@
 </section>
 
 <!-- Highlights -->
-<section class="section hero is-light">
+<section class="section">
   <div class="container is-max-desktop has-text-centered">
     <h2 class="title is-3">Highlights</h2>
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
           <ul>
-            <li>A mathematically grounded epistemic uncertainty estimator for flow-matching models based on <strong>velocity-field disagreement (VFD)</strong>.</li>
-            <li><strong>SAVE</strong>, a framework for uncertainty-guided active fine-tuning that uses VFD to prioritize tasks and initial states for expert demonstration collection.</li>
-            <li>VFD yields <strong>better-calibrated</strong> uncertainty estimates predictive of downstream task performance, with a lightweight two-member ensemble.</li>
-            <li>VFD detects deployment <strong>failures</strong> more reliably than baselines.</li>
-            <li>SAVE reduces the expert data required for multitask adaptation by <strong>at least 22%</strong>.</li>
+            <li>A mathematically grounded epistemic uncertainty estimator for flow-matching models based on <strong>velocity-field disagreement (VFD)</strong>, requiring only a two-member ensemble.</li>
+            <li><strong>SAVE</strong>, a simple yet effective method for uncertainty-guided active fine-tuning that uses VFD to prioritize tasks and initial states for expert demonstration collection.</li>
+            <li>VFD yields <strong>better-calibrated</strong> uncertainty estimates predictive of downstream task performance across two VLAs and a world-action model.</li>
+            <li>SAVE w/ VFD learns new tasks with fewer demonstrations in simulation and improves final average success on three real-world tasks from <strong>39% to 47%</strong>.</li>
+            <li>VFD detects deployment <strong>failures</strong> with <strong>8&nbsp;pp</strong> higher balanced accuracy than existing methods, at a modest inference overhead.</li>
           </ul>
         </div>
       </div>
@@ -498,7 +604,7 @@
           </button>
         </div>
         <pre id="bibtex-code"><code>@article{romer2026uq_vla,
-  title={Uncertainty Quantification for Flow-Based Vision-Language-Action Models},
+  title={Uncertainty Quantification for Flow-Based Generalist Robot Policies},
   author={Ralf R{\"o}mer and Maximilian Seeliger and Saida Liu and Ben Sturgis and Marco Bagatella and Daniel Marta and Andreas Krause and Angela P. Schoellig},
   journal={arXiv preprint arXiv:2606.18043},
   year={2026}
@@ -508,6 +614,8 @@
   </div>
 </section>
 <!-- End BibTeX citation -->
+
+</main>
 
 <footer class="footer">
   <div class="container is-max-desktop">
